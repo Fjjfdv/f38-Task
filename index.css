@@ -1,48 +1,70 @@
-* {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+.top{
+    background-color: rgb(15, 15, 27);
+    color: aliceblue;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+.logo{
+    font-size: 22px;
+    font-weight: bold;
+}
+#menu-toggle{
+    display: none;
+}
+.hamburger{
+    font-size: 28px;
+    cursor: pointer;
+    display: block;
+}
+.nav-links{
+    display: none;
+    flex-direction: column;
+    background-color: rgb(15, 15, 27);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    width: 150px;
+}
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-bottom: 1px solid grey;
+}
+.nav-links a:last-child{
+    border-bottom: none;
+}
 
-        .main {
-            width: 100%;
-            height: 100vh;
-        }
-
-        .top {
-            width: 100%;
-            height: 25%;
-            padding: 10px;
-            border: 3px solid blue;
-        }
-
-        .mid {
-            width: 100%;
-            height: 50%;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            border: 3px solid green;
-        }
-        .mid-upper,
-        .mid-lower {
-            margin: 10px;
-            border: 3px solid red;
-            height: 50%;
-        }
-     @media(min-width:768px) {
-            .mid {
-                flex-direction: row;
-            }
-            .mid-upper,
-        .mid-lower {
-           width: 50%;
-            height: auto;
-        }
-        }
-        .end {
-            width: 100%;
-            height: 25%;
-            padding: 10px;
-            border: 3px solid pink;
-        }
+#menu-toggle:checked + .hamburger + .nav-links{
+    display: flex;
+}
+@media (min-width:768px) {
+    .hamburger{
+        display: none;
+    }
+    .nav-links{
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background: none;
+        width: auto;
+        padding: 0;
+    }
+    .nav-links a{
+        margin-left: 20px;
+        border: none;
+    }
+}
