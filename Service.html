@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -34,6 +36,18 @@
             background-color: rgb(30, 30, 200);
         }
 
+        .main2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: auto;
+        }
+
+        .main3 {
+            width: 70%;
+        }
+
         form input {
             margin: 0 18px;
             padding: 10px;
@@ -41,65 +55,42 @@
         }
 
         form button {
+            align-items: center;
             background-color: rgb(30, 30, 200);
             margin: 0 18px;
-            width: 90%;
+            width: 150px;
         }
 
-        @media (min-width:768px) {
-            .main {
-                color: antiquewhite;
-                padding: 25px;
+        @media (max-width:768px) {
+            .main3 {
                 width: 100%;
-                height: auto;
-                border: 1px solid black;
-                background-color: rgb(28, 19, 64);
             }
-
-            button {
-                font-weight: bold;
-                padding: 14px 18px;
-                border-radius: 20px;
-                color: white;
-                background-color: transparent;
-                border: 1px solid rgb(255, 255, 255);
-                font-size: 22px;
-            }
-
-            h1 {
-                font-size: 50px;
-            }
-
-            form input {
-                font-size: 22px;
-                margin: 0 18px;
-                padding: 20px;
-                width: 90%;
-            }
-
-            form button {
-                background-color: rgb(30, 30, 200);
-                margin: 0 18px;
-                width: 90%;
-            }
-
         }
-        @media (min-width:768px) {
-            h1 {
-                font-size: 40px;
-            }
 
-            form input {
-                font-size: 22px;
-                margin: 0 18px;
-                padding: 18px;
-                width: 70%;
-            }
+        h3 {
+            text-align: center;
+        }
 
-            form button {
-                background-color: rgb(30, 30, 200);
-                margin: 0 18px;
-                width: 70%;
+        .Cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            width: 200px;
+            height: auto;
+            margin: 10px;
+        }
+
+        h3{
+            margin: 20px;
+        }
+
+        @media (max-width:600px) {
+            .Cards {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
@@ -111,14 +102,95 @@
         <button>Hotels</button>
         <button>Car Hire</button>
         <br><br>
-        <h1>The best flight offers from anywhere, to everywhere</h1>
-        <br>
-        <form action="">
-            <input type="text" placeholder="From"><br>
-            <input type="text" placeholder="To (Choose Destination)"><br>
-            <input type="date"><br><br>
-            <button>Search</button>
-        </form>
+        <div class="main2">
+            <div class="main3">
+                <h1>The best flight offers from anywhere, to everywhere</h1>
+                <br>
+                <form action="">
+                    <input type="text" placeholder="From"><br>
+                    <input type="text" placeholder="To (Choose Destination)"><br>
+                    <input type="date"><br><br>
+                    <button>Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <h3>Inspiration to get you going</h3>
+    <div class="Cards">
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.planetware.com/wpimages/2019/11/india-best-places-to-visit-agra.jpg"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Taj Mahal</h5>
+                <p class="card-text">Home to the symbol of love, Taj Mahal, Agra in Uttar Pradesh finds its spot on the
+                    world heritage map. </p>
+
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/Delhi.jpg" class="card-img-top"
+                alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Delhi</h5>
+                <p class="card-text">The capital city makes for one of the perfect travel destinations in India.</p>
+
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/sikkim-tourism.jpg"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Sikkim</h5>
+                <p class="card-text">One of the most beautiful places in India, Sikkim is a glittering gem of the
+                    North-East Himalayas. </p>
+
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/Meghalaya-Shillong.jpg"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Meghalaya</h5>
+                <p class="card-text">Also known as the abode of clouds, Meghalaya is a hidden gem nestled in the lap of
+                    pine-covered Khasi and Garo Hills in the Northeastern part of India.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/mysore-palace.jpg"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Mysore</h5>
+                <p class="card-text">Considered to be the cultural capital of Karnataka in South India, Mysore is a
+                    historic city known for its beautiful palaces and gardens</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/Rishikesh-Rafting.jpg"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Rishikesh</h5>
+                <p class="card-text">Seated on the bank of holy River Ganga, Rishikesh in Uttarakhand is an unmissable
+                    destination in India.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/jaisalmer-desert-camel-safari.jpg"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Jaisalmer</h5>
+                <p class="card-text">Also known as the Land of the Golden Sand, Jaisalmer in Rajasthan is a beautiful
+                    city known for its rich cultural heritage and tales of brave Rajput rulers.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.tourmyindia.com/blog//wp-content/uploads/2020/11/varanasi.jpg" class="card-img-top"
+                alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Varanasi</h5>
+                <p class="card-text">Exploration of India remains incomplete without a trip to the holy city of Varanasi
+                    in Uttar Pradesh. </p>
+            </div>
+        </div>
     </div>
 </body>
 
