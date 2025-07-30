@@ -83,7 +83,7 @@
             margin: 10px;
         }
 
-        h3{
+        h3 {
             margin: 20px;
         }
 
@@ -92,6 +92,139 @@
                 flex-direction: column;
                 align-items: center;
             }
+        }
+
+        .outer-box {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .box {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid black;
+            width: 70%;
+            height: auto;
+            position: relative;
+            background-color: rgb(255, 246, 246);
+        }
+
+        .box-1 {
+            display: flex;
+        }
+
+        .box-img img {
+            width: 150px;
+            height: 200px;
+            border-radius: 20px;
+            object-fit: cover;
+            margin: 12px;
+            transform: rotate(-5deg);
+        }
+
+        .box-text {
+            margin: 10px;
+            text-align: center;
+            position: absolute;
+            top: 10px;
+            left: 180px;
+        }
+
+        .box-2 button {
+            padding: 10px 14px;
+            border-radius: 15px;
+            background-color: black;
+            color: antiquewhite;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        @media (max-width:600px) {
+            .outer-box {
+                display: none;
+            }
+        }
+
+        .horizontal-slider {
+            width: 100%;
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: center;
+            /* height: auto; */
+        }
+
+        .slider-inner {
+            display: flex;
+            width: 80%;
+            /* height: auto; */
+            overflow-x: auto;
+            overflow-y: auto;
+
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            /* iOS smoothness */
+            scrollbar-width: none;
+            /* Firefox hides scrollbar */
+        }
+
+        .slider-inner::-webkit-scrollbar {
+            display: none;
+            /* Chrome/Safari hides scrollbar */
+        }
+
+
+        .card-slider {
+            flex: 0 0 auto;
+            /* ⬅️ Important for horizontal scrolling */
+
+            margin: 5px;
+            width: 300px;
+            height: 300px;
+            position: relative;
+        }
+
+        .card-slider img {
+            width: 268px;
+            height: 278px;
+            border-radius: 17px;
+        }
+
+        .scroll-text {
+            color: white;
+            font-weight: bold;
+            position: absolute;
+            bottom: 30px;
+        }
+
+        .scroll-text h3 {
+            text-align: center;
+        }
+
+        @media (max-width:755px) {
+            .card-slider {
+                width: 250px;
+                height: 250px;
+            }
+
+            .card-slider img {
+                width: 230px;
+                height: 230px;
+            }
+
+            .card-slider {
+                scroll-snap-align: start;
+                padding: 2px;
+            }
+
+            .slider-inner {
+                scroll-snap-type: x mandatory;
+            }
+        }
+
+        p {
+            text-align: center;
         }
     </style>
 </head>
@@ -192,6 +325,128 @@
             </div>
         </div>
     </div>
+    <br>
+    <div class="outer-box">
+        <br>
+        <div class="box">
+            <div class="box-1">
+                <div class="box-img"><img src="https://www.godubrovnik.com/wp-content/uploads/tripplaning.jpg" alt=""
+                        id="img"></div>
+                <div class="box-text">
+                    <h3>Plan your trip your way</h3>
+                    <p>save your faves and more with trips</p>
+                </div>
+            </div>
+            <div class="box-2">
+                <button>Get Started</button>
+            </div>
+        </div>
+        <br>
+    </div>
+    <br>
+    <h3>Do Sommething Award winning</h3>
+    <p>2025’s Travellers’ Choice Awards Best of the Best Things to Do</p>
+    <div class="horizontal-slider">
+        <div class="slider-inner">
+            <div class="card-slider"><img
+                    src="https://ik.imgkit.net/3vlqs5axxjf/TP/ik-seo/images/99999999-9999-9999-9999-999999999999/4831ae54-b6fe-41e3-9c3b-0cf0f5edb7f0/source/Image-The-Sagrada-Familia-basilica-in-Barcelona-Sp.jpeg?tr=w-1400%2Ch-650%2Cfo-auto"
+                    alt="" class="scroll-img">
+                <div class="scroll-text">
+                    <h3>Top Attractions</h3>
+                </div>
+            </div>
+            <div class="card-slider"><img
+                    src="https://ik.imgkit.net/3vlqs5axxjf/TP/ik-seo/images/99999999-9999-9999-9999-999999999999/e7658848-dc89-4956-a410-dbd0e1812921/source/Image-Florence-Italy.-Photo-Credit-Adobe-Stock-Eka.jpeg?tr=w-1400%2Ch-650%2Cfo-auto"
+                    alt="" class="scroll-img">
+                <div class="scroll-text">
+                    <h3>Top Experiences</h3>
+                </div>
+            </div>
+            <div class="card-slider"><img
+                    src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1m4ThZ.img?w=800&h=415&q=60&m=2&f=jpg"
+                    alt="" class="scroll-img">
+                <div class="scroll-text">
+                    <h3>Bucket List</h3>
+                </div>
+            </div>
+            <div class="card-slider"><img src="https://blog.thomascook.in/wp-content/uploads/2015/09/Picture118.jpg"
+                    alt="" class="scroll-img">
+                <div class="scroll-text">
+                    <h3>Culture & historic</h3>
+                </div>
+            </div>
+            <div class="card-slider"><img
+                    src="https://xivents.com/wp-content/uploads/2022/11/healthy-drinks-while-traveling.jpg" alt=""
+                    class="scroll-img">
+                <div class="scroll-text">
+                    <h3>Food and drink</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Iconic Places you need to see</h3>
+    <div class="horizontal-slider">
+        <div class="slider-inner">
+            <div class="card-slider"><img
+                    src="https://www.setaswall.com/wp-content/uploads/2017/03/London-Great-Britain-England-Wallpaper-2560x1600.jpg"
+                    alt="" class="scroll-img">
+                <div class="scroll-text">
+                    <h3>London</h3>
+                </div>
+            </div>
+            <div class="card-slider"><img
+                    src="https://media.architecturaldigest.com/photos/5cdadfa704c41e74349a8438/master/pass/GettyImages-931933966.jpg"
+                    alt="" class="scroll-img">
+                <div class="scroll-text">
+                    <h3>New York</h3>
+                </div>
+            </div>
+            <div class="card-slider"><img
+                    src="https://fthmb.tqn.com/pyZup8NMLi2NAWt1m1vlQ9mQk20=/3865x2576/filters:fill(auto,1)/plaza-de-espa-a-at-dusk--seville--spain-499790854-5aa55d6c1f4e130037937244.jpg"
+                    alt="" class="scroll-img">
+                <div class="scroll-text">
+                    <h3>Spain</h3>
+                </div>
+            </div>
+            <div class="card-slider"><img
+                    src="https://foundtheworld.com/wp-content/uploads/2014/07/Venice-Italy-9-1068x668.jpg" alt=""
+                    class="scroll-img">
+                <div class="scroll-text">
+                    <h3>Italy</h3>
+                </div>
+            </div>
+            <div class="card-slider"><img
+                    src="https://www.essentialhome.eu/inspirations/wp-content/uploads/2016/12/Guide-for-a-short-trip-to-Paris-4.jpg"
+                    alt="" class="scroll-img">
+                <div class="scroll-text">
+                    <h3>France</h3>
+                </div>
+            </div>
+            <div class="card-slider"><img
+                    src="https://imageio.forbes.com/specials-images/imageserve/620ca273d9db9336241d67d9/0x0.jpg?format=jpg&width=1200"
+                    alt="" class="scroll-img">
+                <div class="scroll-text">
+                    <h3>Finland</h3>
+                </div>
+            </div>
+            <div class="card-slider"><img
+                    src="https://pixelz.cc/wp-content/uploads/2017/01/view-of-mout-fuji-from-red-pagoda-tkyo-japan-uhd-4k-wallpaper.jpg"
+                    alt="" class="scroll-img">
+                <div class="scroll-text">
+                    <h3>Japan</h3>
+                </div>
+            </div>
+            <div class="card-slider"><img
+                    src="https://as1.ftcdn.net/v2/jpg/05/50/67/02/1000_F_550670265_zIMZUDc4GFu0ktPySMkjYMiWPSLjsjfU.jpg"
+                    alt="" class="scroll-img">
+                <div class="scroll-text">
+                    <h3>Singapore</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
