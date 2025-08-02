@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      color: #222;
+    }
+
+    .main {
+      width: 100%;
+      padding: 30px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .inner {
+      width: 90%;
+      max-width: 65%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .inner-one {
+      background-color: #f9f9f9;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .inner-one:hover {
+      transform: scale(1.01);
+    }
+
+    .bg {
+      height: 180px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    p,
+    ul {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    ul {
+      list-style-position: inside;
+      text-align: left;
+      padding-left: 0;
+    }
+
+    @media (max-width: 768px) {
+      .inner {
+        width: 95%;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p,
+      ul {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="inner">
+
+      <div class="inner-one">
+        <div class="bg" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');"></div>
+        <div class="content">
+          <h2>Your journey begins here.</h2>
+          <p>At our website, we believe travel isn't just about the destination – it's about the experience, the culture, and the unforgettable memories you create along the way. We're passionate explorers, storytellers, and experience curators dedicated to helping you discover the world's most beautiful places — whether it's a hidden beach in Goa, the snowy peaks of Himachal, or vibrant markets of Rajasthan.</p>
+        </div>
+      </div>
+
+      <div class="inner-one">
+        <div class="bg" style="background-image: url('https://tvilight.com/wp-content/uploads/2024/11/Smart-Street-Lights-Jaipur-India.webp');"></div>
+        <div class="content">
+          <h2>What We Do:</h2>
+          <ul>
+            <li>Curated travel guides & itineraries</li>
+            <li>Affordable travel deals & packages</li>
+            <li>Expert travel tips & recommendations</li>
+            <li>Real reviews & honest insights</li>
+            <li>Customized experiences for every kind of traveler</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="inner-one">
+        <div class="bg" style="background-image: url('https://www.tmb.ie/wp/wp-content/uploads/2018/07/Best-backpacking-destinations-1-1.jpg');"></div>
+        <div class="content">
+          <h2>Our Mission:</h2>
+          <p>To make travel easy, accessible, and unforgettable for everyone — whether you're a solo backpacker, a couple on a romantic getaway, or a family planning your dream vacation.</p>
+        </div>
+      </div>
+
+      <div class="inner-one">
+        <div class="bg" style="background-image: url('https://img.freepik.com/premium-photo/persons-hands-plan-trip-by-pointing-map_255669-14479.jpg');"></div>
+        <div class="content">
+          <h2>Why Choose Us?</h2>
+          <ul>
+            <li>Passionate travel community</li>
+            <li>Local insights, not just generic blogs</li>
+            <li>Authentic, experience-driven recommendations</li>
+            <li>24/7 support and personalized planning</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
+
+
